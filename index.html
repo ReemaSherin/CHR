@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Our Little Story 💕</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
+
+<div class="hearts-container"></div>
+
+
+
+<!-- =====================================================
+     PAGE 1 : LOGIN
+===================================================== -->
+
+<section id="loginPage" class="page active">
+
+    <div class="login-card">
+
+        <div class="heart">
+            💕
+        </div>
+
+        <p class="small-title">
+            A LITTLE PLACE FOR US
+        </p>
+
+        <h1>
+            Hey, Bestie!
+        </h1>
+
+        <p>
+            This little website is only for you.
+        </p>
+
+
+        <label>
+            Enter your name
+        </label>
+
+        <input
+            type="text"
+            id="friendName"
+            placeholder="Your name"
+        >
+
+
+        <button
+            class="main-btn"
+            onclick="firstLogin()"
+        >
+            Open Our Story ✨
+        </button>
+
+
+        <p
+            id="loginError"
+            class="error"
+        ></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2 : FAVORITE NAME
+===================================================== -->
+
+<section id="secretPage" class="page">
+
+    <div class="login-card">
+
+        <div class="heart">
+            🔐
+        </div>
+
+
+        <p class="small-title">
+            ONE LITTLE SECRET
+        </p>
+
+
+        <h1>
+            Choose My Favourite Name
+        </h1>
+
+
+        <p>
+            Before you enter my little world,
+            choose the name I love the most. 💗
+        </p>
+
+
+        <div class="name-options">
+
+
+            <button
+                class="name-option"
+                onclick="selectFavorite(this, 'Dhuda')"
+            >
+                Dhuda 🌸
+            </button>
+
+
+            <button
+                class="name-option"
+                onclick="selectFavorite(this, 'Boori')"
+            >
+                Boori 🦋
+            </button>
+
+
+            <button
+                class="name-option"
+                onclick="selectFavorite(this, 'Mammuu')"
+            >
+                Mammuu 💕
+            </button>
+
+
+            <button
+                class="name-option"
+                onclick="selectFavorite(this, 'Bulli Bujji')"
+            >
+                Bulli Bujji ✨
+            </button>
+
+
+        </div>
+
+
+        <p
+            id="secretError"
+            class="error"
+        ></p>
+
+
+        <button
+            id="favoriteNext"
+            class="next-btn"
+            onclick="secondLogin()"
+            disabled
+        >
+            Continue 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<section id="mainPage" class="page">
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
+
+    <nav>
+
+        <div class="logo">
+            Us ♡
+        </div>
+
+
+        <div class="nav-links">
+
+            <button onclick="showSection('home')">
+                Home
+            </button>
+
+
+            <button onclick="showSection('letters')">
+                Letters
+            </button>
+
+
+            <button onclick="showSection('memories')">
+                Memories
+            </button>
+
+
+            <button onclick="showSection('quiz')">
+                Quiz
+            </button>
+
+
+            <button onclick="showSection('thankyou')">
+                Thank You
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         HOME
+    ================================================== -->
+
+    <div
+        id="home"
+        class="content-section active-section"
+    >
+
+
+        <div class="hero">
+
+            <p class="small-title">
+                OUR LITTLE STORY
+            </p>
+
+
+            <h1>
+
+                For My Favorite Person
+
+                <br>
+
+                <span>
+                    and My Best Friend
+                </span>
+
+                💕
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Some friendships become memories.
+
+                <br>
+
+                Ours became a whole story.
+
+            </p>
+
+
+            <button
+                class="main-btn"
+                onclick="showSection('letters')"
+            >
+                Start Our Story 💌
+            </button>
+
+        </div>
+
+
+
+        <div class="quote-card">
+
+            <span>
+                “
+            </span>
+
+
+            <p>
+
+                No matter how much time passes,
+                I hope we always find our way
+                back to each other.
+
+            </p>
+
+
+            <span>
+                ”
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         LETTERS
+    ================================================== -->
+
+    <div
+        id="letters"
+        class="content-section"
+    >
+
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                FIVE LITTLE LETTERS
+            </p>
+
+
+            <h2>
+                Open Them One By One 💌
+            </h2>
+
+
+            <p>
+                Each envelope has something
+                I wanted to tell you.
+            </p>
+
+        </div>
+
+
+
+        <div class="letters-grid">
+
+
+            <!-- LETTER 1 -->
+
+            <div
+                class="envelope-card"
+                onclick="openLetter(1)"
+            >
+
+                <div class="envelope">
+                    💌
+                </div>
+
+
+                <h3>
+                    Letter One
+                </h3>
+
+
+                <p>
+                    How it all began...
+                </p>
+
+            </div>
+
+
+
+            <!-- LETTER 2 -->
+
+            <div
+                class="envelope-card"
+                onclick="openLetter(2)"
+            >
+
+                <div class="envelope">
+                    💌
+                </div>
+
+
+                <h3>
+                    Letter Two
+                </h3>
+
+
+                <p>
+                    Things I never say enough...
+                </p>
+
+            </div>
+
+
+
+            <!-- LETTER 3 -->
+
+            <div
+                class="envelope-card"
+                onclick="openLetter(3)"
+            >
+
+                <div class="envelope">
+                    💌
+                </div>
+
+
+                <h3>
+                    Letter Three
+                </h3>
+
+
+                <p>
+                    Our funniest memories...
+                </p>
+
+            </div>
+
+
+
+            <!-- LETTER 4 -->
+
+            <div
+                class="envelope-card"
+                onclick="openLetter(4)"
+            >
+
+                <div class="envelope">
+                    💌
+                </div>
+
+
+                <h3>
+                    Letter Four
+                </h3>
+
+
+                <p>
+                    For the difficult days...
+                </p>
+
+            </div>
+
+
+
+            <!-- LETTER 5 -->
+
+            <div
+                class="envelope-card"
+                onclick="openLetter(5)"
+            >
+
+                <div class="envelope">
+                    💌
+                </div>
+
+
+                <h3>
+                    Letter Five
+                </h3>
+
+
+                <p>
+                    One last thing...
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            class="page-next"
+            onclick="goToMemories()"
+        >
+
+            I've Read All My Letters 💕
+
+            <br>
+
+            Next → Photos & Videos 📸
+
+        </button>
+
+
+        <button
+            class="back-btn page-back"
+            onclick="showSection('home')"
+        >
+
+            ← Back to Home
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         MEMORIES
+    ================================================== -->
+
+    <div
+        id="memories"
+        class="content-section"
+    >
+
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                OUR MEMORIES
+            </p>
+
+
+            <h2>
+                Little Moments,
+                Big Memories 📸
+            </h2>
+
+
+            <p>
+                Every picture has a story.
+            </p>
+
+        </div>
+
+
+
+        <div class="gallery">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="memory">
+
+                <img
+                    src="images/r1.jpeg"
+                    alt="Our memory"
+                >
+
+                <div class="memory-caption">
+                    One of my favorite memories ♡
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="memory">
+
+                <img
+                    src="images/r2.jpeg"
+                    alt="Our memory"
+                >
+
+                <div class="memory-caption">
+                    Us being us 💕
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="memory">
+
+                <img
+                    src="images/r3.jpeg"
+                    alt="Our memory"
+                >
+
+                <div class="memory-caption">
+                    A day I'll never forget ✨
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="memory">
+
+                <img
+                    src="images/r4.jpeg"
+                    alt="Our memory"
+                >
+
+                <div class="memory-caption">
+                    Another beautiful memory 💗
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="memory">
+
+                <img
+                    src="images/r5.jpeg"
+                    alt="Our memory"
+                >
+
+                <div class="memory-caption">
+                    Forever a favorite 📸
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO -->
+
+            <div class="memory">
+
+                <video controls>
+
+                    <source
+                        src="images/rv.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+
+                <div class="memory-caption">
+                    Press play for a little memory 🎥
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            class="page-next"
+            onclick="showSection('quiz')"
+        >
+
+            I've Seen All Our Memories 💕
+
+            <br>
+
+            Next → Best Friend Quiz 🧠
+
+        </button>
+
+
+        <button
+            class="back-btn page-back"
+            onclick="showSection('letters')"
+        >
+
+            ← Back to Letters
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         QUIZ
+    ================================================== -->
+
+    <div
+        id="quiz"
+        class="content-section"
+    >
+
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                ONE LAST TEST
+            </p>
+
+
+            <h2>
+                How Well Do You Know Us? 🧠
+            </h2>
+
+
+            <p>
+                Let's see how well you remember us 💕
+            </p>
+
+        </div>
+
+
+
+        <div class="quiz-card">
+
+
+            <!-- QUESTION 1 -->
+
+            <div
+                class="quiz-step active-question"
+                id="question1"
+            >
+
+                <p class="question-number">
+                    Question 1 of 6
+                </p>
+
+
+                <h3>
+                    What makes our friendship special? 💕
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q1"
+                        value="wrong"
+                    >
+
+                    We barely talk
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q1"
+                        value="correct"
+                    >
+
+                    The memories we make together
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q1"
+                        value="wrong"
+                    >
+
+                    We always agree
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q1"
+                        value="wrong"
+                    >
+
+                    Nothing special
+
+                </label>
+
+
+                <button
+                    class="main-btn quiz-next"
+                    onclick="nextQuestion(1)"
+                >
+
+                    Next 💕
+
+                </button>
+
+            </div>
+
+
+
+            <!-- QUESTION 2 -->
+
+            <div
+                class="quiz-step"
+                id="question2"
+            >
+
+                <p class="question-number">
+                    Question 2 of 6
+                </p>
+
+
+                <h3>
+                    What we do most of the time? 🥰
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q2"
+                        value="wrong"
+                    >
+
+                    Ignore each other
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q2"
+                        value="correct"
+                    >
+
+                    Chatting
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q2"
+                        value="wrong"
+                    >
+
+                    Fighting
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q2"
+                        value="wrong"
+                    >
+
+                    Forget each other
+
+                </label>
+
+
+                <div class="quiz-buttons">
+
+                    <button
+                        class="back-btn"
+                        onclick="previousQuestion(2)"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <button
+                        class="main-btn"
+                        onclick="nextQuestion(2)"
+                    >
+                        Next 💕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 3 -->
+
+            <div
+                class="quiz-step"
+                id="question3"
+            >
+
+                <p class="question-number">
+                    Question 3 of 6
+                </p>
+
+
+                <h3>
+                    How many Years are we being friends? 😂
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q3"
+                        value="wrong"
+                    >
+
+                    1
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q3"
+                        value="correct"
+                    >
+
+                    2
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q3"
+                        value="wrong"
+                    >
+
+                    3
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q3"
+                        value="wrong"
+                    >
+
+                    4
+
+                </label>
+
+
+                <div class="quiz-buttons">
+
+                    <button
+                        class="back-btn"
+                        onclick="previousQuestion(3)"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <button
+                        class="main-btn"
+                        onclick="nextQuestion(3)"
+                    >
+                        Next 💕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 4 -->
+
+            <div
+                class="quiz-step"
+                id="question4"
+            >
+
+                <p class="question-number">
+                    Question 4 of 6
+                </p>
+
+
+                <h3>
+                    What should we always keep? 💗
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q4"
+                        value="wrong"
+                    >
+
+                    Our arguments
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q4"
+                        value="correct"
+                    >
+
+                    Our friendship
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q4"
+                        value="wrong"
+                    >
+
+                    Our secrets
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q4"
+                        value="wrong"
+                    >
+
+                    Our distance
+
+                </label>
+
+
+                <div class="quiz-buttons">
+
+                    <button
+                        class="back-btn"
+                        onclick="previousQuestion(4)"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <button
+                        class="main-btn"
+                        onclick="nextQuestion(4)"
+                    >
+                        Next 💕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 5 -->
+
+            <div
+                class="quiz-step"
+                id="question5"
+            >
+
+                <p class="question-number">
+                    Question 5 of 6
+                </p>
+
+
+                <h3>
+                    What makes our memories unforgettable? ✨
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q5"
+                        value="wrong"
+                    >
+
+                    Expensive places
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q5"
+                        value="wrong"
+                    >
+
+                    Perfect pictures
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q5"
+                        value="correct"
+                    >
+
+                    spending time together 
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q5"
+                        value="wrong"
+                    >
+
+                    Less talks
+
+                </label>
+
+
+                <div class="quiz-buttons">
+
+                    <button
+                        class="back-btn"
+                        onclick="previousQuestion(5)"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <button
+                        class="main-btn"
+                        onclick="nextQuestion(5)"
+                    >
+                        Next 💕
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 6 -->
+
+            <div
+                class="quiz-step"
+                id="question6"
+            >
+
+                <p class="question-number">
+                    Question 6 of 6
+                </p>
+
+
+                <h3>
+                    What do I hope never changes? 🥹
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q6"
+                        value="wrong"
+                    >
+
+                    Our schedules
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q6"
+                        value="wrong"
+                    >
+
+                    Our phones
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q6"
+                        value="correct"
+                    >
+
+                    Our friendship
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q6"
+                        value="wrong"
+                    >
+
+                    Our locations
+
+                </label>
+
+
+                <div class="quiz-buttons">
+
+                    <button
+                        class="back-btn"
+                        onclick="previousQuestion(6)"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <button
+                        class="main-btn"
+                        onclick="finishQuiz()"
+                    >
+
+                        See My Score 💕
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                id="quizResult"
+                class="quiz-result"
+            ></div>
+
+
+
+            <!-- NEXT -->
+
+            <button
+                id="quizNext"
+                class="page-next hidden"
+                onclick="showSection('thankyou')"
+            >
+
+                Finish Our Little Story 💗
+
+                <br>
+
+                Next → Thank You Letter 💌
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         THANK YOU
+    ================================================== -->
+
+    <div
+        id="thankyou"
+        class="content-section"
+    >
+
+
+        <div class="thankyou-card">
+
+
+            <div class="big-heart">
+                ♥
+            </div>
+
+
+            <p class="small-title">
+                AND FINALLY...
+            </p>
+
+
+            <h2>
+                Thank You, Bestie.
+            </h2>
+
+
+            <div class="thankyou-letter">
+
+                <p>
+                    Dear best friend,
+                </p>
+
+
+                <p>
+
+                    Thank you for every laugh,
+                    every conversation,
+                    every silly moment,
+                    every memory and every
+                    time you stayed.
+
+                </p>
+
+
+                <p>
+
+                    Thank you for being there
+                    through the good days,
+                    the bad days and all those
+                    completely random days.
+
+                </p>
+
+
+                <p>
+
+                    I don't know what the future
+                    will look like.
+
+                    We may grow,
+                    change and become busy.
+
+                    But I hope one thing never changes...
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Our friendship.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    No matter where life takes us,
+                    I hope we always have a little
+                    corner of our lives where we
+                    can find each other again.
+
+                </p>
+
+
+                <p>
+
+                    I'm really lucky to have you.
+
+                    ❤️
+
+                </p>
+
+
+                <p class="signature">
+
+                    Forever your best friend,
+
+                    <br><br>
+
+                    Mamuu,boori,dhunna,dhuda... 💕
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="back-btn page-back"
+                onclick="showSection('quiz')"
+            >
+
+                ← Back to Quiz
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        Made with love,
+        memories &
+        a little bit of craziness ♡
+
+    </footer>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LETTER POPUP
+===================================================== -->
+
+<div
+    id="letterModal"
+    class="modal"
+>
+
+
+    <div class="letter-paper">
+
+
+        <button
+            class="close"
+            onclick="closeLetter()"
+        >
+            ×
+        </button>
+
+
+        <div id="letterContent"></div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
